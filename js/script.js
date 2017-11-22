@@ -76,7 +76,7 @@ let firstNumberInput = document.createElement('input');
 firstNumberInput.setAttribute("type", "text");
 firstNumberInput.classList.add('number-input');
 convCont.append(firstNumberInput);
-firstNumberInput.style.left = ((centerFirstArc - firstNumberInput.offsetWidth / 2) + 'px');
+firstNumberInput.style.left = ((centerFirstArc - firstNumberInput.clientWidth/2) + 'px');
 firstNumberInput.style.top = (bendFirstArc + 'px'); //Расположение первого input над дугой
 
 let secondNumberInput = document.createElement('input');
@@ -113,7 +113,7 @@ function appendInputValue() { // Проверка оставшихся input
 			secondNumberInput.setAttribute("type", "text");
 			secondNumberInput.classList.add('number-input');
 			convCont.append(secondNumberInput);
-			secondNumberInput.style.left = ((centerSecondArc - secondNumberInput.offsetWidth) + 'px');
+			secondNumberInput.style.left = ((centerSecondArc - secondNumberInput.clientWidth) + 'px');
 			secondNumberInput.style.top = (bendFirstArc / 1.5 + 'px'); //Расположение второго input над дугой
 			createSecondArc(); // Рисуем дугу
 		}
