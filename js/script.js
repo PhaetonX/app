@@ -74,6 +74,7 @@ function createSecondArc() { //Рисуем вторую дугу
 //Inputs
 let firstNumberInput = document.createElement('input');
 firstNumberInput.setAttribute("type", "text");
+firstNumberInput.setAttribute("maxlength", "1");
 firstNumberInput.classList.add('number-input');
 convCont.append(firstNumberInput);
 firstNumberInput.style.left = ((centerFirstArc - firstNumberInput.clientWidth/2) + 'px');
@@ -83,6 +84,7 @@ let secondNumberInput = document.createElement('input');
 
 let equallyInput = document.createElement('input');
 equallyInput.setAttribute("type", "text");
+equallyInput.setAttribute("maxlength", "2");
 equallyInput.classList.add('equallyInput');
 
 function checkValue(inputValue, spanValue, span) { // Проверка значения input
@@ -111,6 +113,7 @@ function appendInputValue() { // Проверка оставшихся input
 			return;
 		} else if (input.disabled) {
 			secondNumberInput.setAttribute("type", "text");
+			secondNumberInput.setAttribute("maxlength", "1");
 			secondNumberInput.classList.add('number-input');
 			convCont.append(secondNumberInput);
 			secondNumberInput.style.left = ((centerSecondArc - secondNumberInput.clientWidth) + 'px');
